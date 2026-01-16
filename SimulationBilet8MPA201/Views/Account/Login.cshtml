@@ -1,0 +1,39 @@
+﻿@model LoginVM
+<section class="vh-100">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 text-black">
+
+
+
+				<div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+					<form asp-controller="Account" asp-action="Login" method="post" style="width: 23rem;">
+
+						<h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<div data-mdb-input-init class="form-outline mb-4">
+							<input asp-for="Email" type="email" id="form2Example18" class="form-control form-control-lg" />
+							<label asp-for="Email" class="form-label" for="form2Example18">Email address</label>
+							<span asp-validation-for="Email" class="text-danger"></span>
+						</div>
+
+						<div data-mdb-input-init class="form-outline mb-4">
+							<input asp-for="Password" type="password" id="form2Example28" class="form-control form-control-lg" />
+							<label asp-for="Password" class="form-label" for="form2Example28">Password</label>
+							<span asp-validation-for="Password" class="text-danger"></span>
+						</div>
+
+						<button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
