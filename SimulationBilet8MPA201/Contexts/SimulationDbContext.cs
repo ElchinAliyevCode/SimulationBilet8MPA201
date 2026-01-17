@@ -16,4 +16,6 @@ public class SimulationDbContext : IdentityDbContext<AppUser>
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(builder);
     }
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Teacher> Teachers { get; set; }
 }

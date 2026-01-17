@@ -1,0 +1,39 @@
+﻿@model CourseUpdateVM
+<div class="container">
+    <div asp-validation-summary="ModelOnly" class="text-danger"><</div>
+    <div class="row">
+        <form method="post" asp-area="Admin" asp-controller="Course" asp-action="Update" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label asp-for="Title">Title</label>
+                <input asp-for="Title" placeholder="Enter Title">
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Rating">Rating</label>
+                <input asp-for="Rating" placeholder="Enter Rating">
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Image">Image</label>
+                <input asp-for="Image" placeholder="Enter Image">
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+
+            <select asp-for="TeacherId">
+                @foreach (var item in ViewBag.Teachers)
+                {
+                    <option value="@item.Id">@item.FirstName || @item.LastName</option>
+
+                }
+            </select>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

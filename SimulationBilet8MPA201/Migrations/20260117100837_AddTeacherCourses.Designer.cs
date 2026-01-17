@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SimulationBilet8MPA201.Contexts;
 
@@ -11,9 +12,11 @@ using SimulationBilet8MPA201.Contexts;
 namespace SimulationBilet8MPA201.Migrations
 {
     [DbContext(typeof(SimulationDbContext))]
-    partial class SimulationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260117100837_AddTeacherCourses")]
+    partial class AddTeacherCourses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
